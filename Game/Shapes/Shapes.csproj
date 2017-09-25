@@ -82,7 +82,6 @@
     <Compile Include="Assets\Scripts\GameManager\Spawner.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Wall\WallCounter.cs" />
-    <Compile Include="Assets\Scripts\Wall\WallDestroy.cs" />
     <Compile Include="Assets\Scripts\Wall\WallMovement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

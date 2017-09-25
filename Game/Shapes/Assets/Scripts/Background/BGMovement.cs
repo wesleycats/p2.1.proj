@@ -6,6 +6,7 @@ public class BGMovement : MonoBehaviour {
 
     private float _BGCurrentX;
     private float _BackgroundX;
+    [SerializeField]
     private float _MapSpeed;
     [SerializeField]
     private GameObject _Background;
@@ -13,7 +14,7 @@ public class BGMovement : MonoBehaviour {
     // Use this for initialization
     void Start () { 
         _BackgroundX = 25.1f;
-        _MapSpeed = 5;
+        //_MapSpeed = 5;
     }
 	
 	// Update is called once per frame
