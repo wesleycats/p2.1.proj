@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WallCounter : MonoBehaviour {
 
+	public int _WallValue;
+
 	// Use this for initialization
 	void Start () {
 		
