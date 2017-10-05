@@ -22,7 +22,7 @@ public class WallMovement : MonoBehaviour
 
     void CheckPosition()
     {
-        if (transform.position.x >= 25.1f)
+        if (transform.position.x <= -20)
         {
             Destroy(gameObject);
         }
