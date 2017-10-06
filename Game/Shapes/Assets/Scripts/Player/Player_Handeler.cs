@@ -21,8 +21,8 @@ public class Player_Handeler : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		print("Lives are: " + _Lives);
-		print("Score is: " + _Score);
+		//print("Lives are: " + _Lives);
+		//print("Score is: " + _Score);
 
 	}
 

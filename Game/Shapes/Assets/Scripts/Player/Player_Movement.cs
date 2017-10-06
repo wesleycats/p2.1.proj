@@ -9,6 +9,8 @@ public class Player_Movement : MonoBehaviour {
 	float _PlayerYUpdated = 0;
 	float _Gravity = 0.999f;
 	float _JumpingForce = 0;
+	[SerializeField]
+	float _Step = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -20,22 +22,27 @@ public class Player_Movement : MonoBehaviour {
 		_PlayerCurrentX = gameObject.transform.position.x;
 		_PlayerCurrentY = gameObject.transform.position.y;
 
-		if (Input.GetKeyDown("w"))
-		{
-			
-			StartCoroutine("Jumping");
 
+		if (transform.position.y <= 3) {
+			if (Input.GetKeyDown("w") || Input.GetKeyDown(KeyCode.UpArrow))
+			{
+
+				StartCoroutine("Jumping");
+
+			}
 		}
 
-		if (Input.GetKeyDown("s"))
+		if (transform.position.y >= -3)
 		{
+			if (Input.GetKeyDown("s") || Input.GetKeyDown(KeyCode.DownArrow))
+			{
 
-			StartCoroutine("Dropping");
+				StartCoroutine("Dropping");
 
+			}
 		}
 
-
-
+		
 		
 
 		
@@ -46,10 +53,10 @@ public class Player_Movement : MonoBehaviour {
 	private IEnumerator Jumping()
 	{
 		//print("hai");
-		for (float i = 0; i < 15; i++)
+		for (float i = 0; i < _Step; i++)
 		{
 			
-			_JumpingForce = i / 15;
+			_JumpingForce = i / _Step;
 			
 			yield return null;
 		}
@@ -60,10 +67,10 @@ public class Player_Movement : MonoBehaviour {
 	private IEnumerator Dropping()
 	{
 		//print("hai");
-		for (float i = 0; i < 15; i++)
+		for (float i = 0; i < _Step; i++)
 		{
 			//print("hai");
-			_JumpingForce = - i / 15;
+			_JumpingForce = - i / _Step;
 
 			yield return null;
 		}
