@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Hole_ShapeChanger : MonoBehaviour
 {
+
+	/// <summary>
+	/// This script determines the shape of a hole
+	/// </summary>
+
 	public int _WallValue = 1;
 	[SerializeField]
 	Sprite _Square;
@@ -18,7 +23,7 @@ public class Hole_ShapeChanger : MonoBehaviour
 	void Start()
 	{
 		_WallValue = Random.Range(1, 3);
-		print(_WallValue);
+		//print(_WallValue);
 
 		switch (_WallValue)
 		{

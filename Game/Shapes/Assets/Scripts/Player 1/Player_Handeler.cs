@@ -22,8 +22,8 @@ public class Player_Handeler : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        print("Lives are: " + _Lives);
-        print("Score is: " + _Score);
+        //print("Lives are: " + _Lives);
+        //print("Score is: " + _Score);
 		
 		
     }
