@@ -38,6 +38,10 @@ public class MenuNavigation : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update() {
+<<<<<<< HEAD
+=======
+		print(toggle);
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 		if (toggle)
 		{
 			toggle_object.SetActive(true);
@@ -123,7 +127,11 @@ public class MenuNavigation : MonoBehaviour {
 
 	void CheckForInput()
 	{
+<<<<<<< HEAD
 		if (Input.GetKeyDown(KeyCode.UpArrow))
+=======
+		if (Input.GetKeyDown(KeyCode.W))
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 		{
 
 			if (_Selected != Selected.Start && !toggle)
@@ -147,7 +155,11 @@ public class MenuNavigation : MonoBehaviour {
 			}
 		}
 
+<<<<<<< HEAD
 		if (Input.GetKeyDown(KeyCode.DownArrow))
+=======
+		if (Input.GetKeyDown(KeyCode.S))
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 		{
 			if (_Selected != Selected.Quit && !toggle)
 			{
@@ -176,8 +188,13 @@ public class MenuNavigation : MonoBehaviour {
 			switch (_Selected)
 			{
 				case Selected.Start:
+<<<<<<< HEAD
                     SceneManager.LoadScene("Main");
                     break;
+=======
+					LoadScene(1);
+					break;
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 				case Selected.Options:
 					ToggleOptionMenu();
 					break;

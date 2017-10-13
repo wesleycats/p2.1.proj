@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class Hole_ShapeChanger : MonoBehaviour
 {
+<<<<<<< HEAD
 	public int _WallValue;
+=======
+
+	/// <summary>
+	/// This script determines the shape of a hole
+	/// </summary>
+
+	public int _WallValue = 1;
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 	[SerializeField]
 	Sprite _Square;
 	[SerializeField]
@@ -12,6 +21,7 @@ public class Hole_ShapeChanger : MonoBehaviour
 	[SerializeField]
 	Sprite _Circle;
 
+<<<<<<< HEAD
     Sprite[] sprites;
     public SpriteRenderer _renderer;
 
@@ -31,6 +41,16 @@ public class Hole_ShapeChanger : MonoBehaviour
         _renderer.sprite = sprites[_WallValue];
 
         /*
+=======
+
+
+	// Use this for initialization
+	void Start()
+	{
+		_WallValue = Random.Range(1, 3);
+		//print(_WallValue);
+
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 		switch (_WallValue)
 		{
 			case 1:
@@ -45,8 +65,12 @@ public class Hole_ShapeChanger : MonoBehaviour
 				gameObject.GetComponent<SpriteRenderer>().sprite = _Triangle;
 				break;
 		}
+<<<<<<< HEAD
         */
     }
+=======
+	}
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
 
 	// Update is called once per frame
 	void Update()

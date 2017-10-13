@@ -7,7 +7,11 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{547326AB-35F2-5617-8BCA-095A5E791A80}</ProjectGuid>
     <OutputType>Library</OutputType>
+<<<<<<< HEAD
     <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+=======
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -50,6 +54,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEditor">
+<<<<<<< HEAD
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
@@ -75,11 +80,39 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+=======
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>Library\UnityAssemblies\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\NeonShapes\SelfDestroyScript.cs" />
     <Compile Include="Assets\Scripts\Background\BGMovement.cs" />
+<<<<<<< HEAD
     <Compile Include="Assets\Scripts\GameManager\Debug.cs" />
     <Compile Include="Assets\Scripts\GameManager\Difficulty.cs" />
     <Compile Include="Assets\Scripts\GameManager\Lose.cs" />
@@ -93,6 +126,14 @@
     <Compile Include="Assets\Scripts\Player\Player_Movement.cs" />
     <Compile Include="Assets\Scripts\Player\Player_ShapeChange.cs" />
     <Compile Include="Assets\Scripts\SoundManager\SoundManager.cs" />
+=======
+    <Compile Include="Assets\Scripts\GameManager\Spawner.cs" />
+    <Compile Include="Assets\Scripts\Hole\Hole.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_Handeler.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_Movement.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_ShapeChange.cs" />
+    <Compile Include="Assets\Scripts\Wall\WallCounter.cs" />
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
     <Compile Include="Assets\Scripts\Wall\WallMovement.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

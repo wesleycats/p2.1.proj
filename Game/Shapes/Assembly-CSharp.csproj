@@ -55,6 +55,13 @@
      <Compile Include="Assets\Scripts\Background\BGMovement.cs" />
      <Compile Include="Assets\Scripts\GameManager\Spawner.cs" />
      <Compile Include="Assets\Scripts\Hole\Hole_ShapeChanger.cs" />
+<<<<<<< HEAD
+=======
+     <Compile Include="Assets\Scripts\Menu\LoadScenes.cs" />
+     <Compile Include="Assets\Scripts\Menu\MenuNavigation.cs" />
+     <Compile Include="Assets\Scripts\Menu\QuitSnenes.cs" />
+     <Compile Include="Assets\Scripts\Menu\ShowMenu.cs" />
+>>>>>>> 2e8b70eadeec5b197e6da144e1172807c8c8dbcd
      <Compile Include="Assets\Scripts\Player 1\Player_Handeler.cs" />
      <Compile Include="Assets\Scripts\Player 1\Player_Movement.cs" />
      <Compile Include="Assets\Scripts\Player 1\Player_ShapeChange.cs" />
