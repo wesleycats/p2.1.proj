@@ -89,9 +89,6 @@
     <Compile Include="Assets\Scripts\Menu\MenuNavigation.cs" />
     <Compile Include="Assets\Scripts\Menu\QuitSnenes.cs" />
     <Compile Include="Assets\Scripts\Menu\ShowMenu.cs" />
-    <Compile Include="Assets\Scripts\Player 1\Player_Handeler.cs" />
-    <Compile Include="Assets\Scripts\Player 1\Player_Movement.cs" />
-    <Compile Include="Assets\Scripts\Player 1\Player_ShapeChange.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Handeler.cs" />
     <Compile Include="Assets\Scripts\Player\Player_Movement.cs" />
     <Compile Include="Assets\Scripts\Player\Player_ShapeChange.cs" />
