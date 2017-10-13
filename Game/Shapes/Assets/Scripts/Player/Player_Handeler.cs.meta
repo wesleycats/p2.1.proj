@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 5f84cb7554ef49f4b91debf781d2b5ee
-timeCreated: 1506343780
+guid: 164ef07762529da47b0360c6ab7c3b76
+timeCreated: 1507289922
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _LivesText: {fileID: 1024182733733582, guid: 71807446208001d4280e5869e8988e10,
+      type: 2}
+  - _ScoreText: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

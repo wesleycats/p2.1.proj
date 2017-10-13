@@ -8,8 +8,9 @@ public class Player_Movement : MonoBehaviour {
 	float _PlayerCurrentY;
 	//float _PlayerYUpdated = 0;
 	//float _Gravity = 0.999f;
-	float _JumpingForce = 0;
-    float _MoveSpeed = 0.001f;
+	//float _JumpingForce = 0;
+    float _MoveDelay = 0.00001f;
+    float _MoveSpeed = 0.2175f;
 
     // Use this for initialization
     void Start () {
@@ -21,94 +22,95 @@ public class Player_Movement : MonoBehaviour {
 		_PlayerCurrentX = gameObject.transform.position.x;
 		_PlayerCurrentY = gameObject.transform.position.y;
 
-		if (Input.GetKeyDown("w"))
+		if (Input.GetKeyDown(KeyCode.UpArrow))
 		{
             StartCoroutine("Up");
             //_PlayerCurrentY += 2.175f;
         }
 
-		if (Input.GetKeyDown("s"))
+		if (Input.GetKeyDown(KeyCode.DownArrow))
 		{
-            StartCoroutine("Down");
-            // _PlayerCurrentY -= 2.175f;
-        }
+			StartCoroutine("Down");
+			// _PlayerCurrentY -= 2.175f;
+		}
 
 		//gameObject.transform.position = new Vector3(_PlayerCurrentX,_PlayerCurrentY + _JumpingForce);
 	}
 
     private IEnumerator Up()
     {
-        if (_PlayerCurrentY == 2.175f)
+		if (_PlayerCurrentY == 2.175f)
         {
-            for (float i = _PlayerCurrentY; i <= 4.35f; i += 0.2175f)
+            for (float i = _PlayerCurrentY; i <= 4.35f; i += _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
         }
 
         if (_PlayerCurrentY == -2.175f)
         {
-            for (float i = _PlayerCurrentY; i <= 0; i += 0.2175f)
+            for (float i = _PlayerCurrentY; i <= 0; i += _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
             gameObject.transform.position = new Vector3(_PlayerCurrentX, 0);
         }
 
         if (_PlayerCurrentY == 0)
         { 
-            for (float i = _PlayerCurrentY; i <= 2.175f; i += 0.2175f)
+            for (float i = _PlayerCurrentY; i <= 2.175f; i += _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
         }
 
         if (_PlayerCurrentY == -4.35f)
         {
-            for (float i = _PlayerCurrentY; i <= -2.175f; i += 0.2175f)
+            for (float i = _PlayerCurrentY; i <= -2.175f; i += _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
         }
     }
 
     private IEnumerator Down()
     {
-        if (_PlayerCurrentY == -2.175f)
+		
+		if (_PlayerCurrentY == -2.175f)
         {
-            for (float i = _PlayerCurrentY; i >= -4.35f; i -= 0.2175f)
+            for (float i = _PlayerCurrentY; i >= -4.35f; i -= _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
         }
 
         if (_PlayerCurrentY == 0)
         {
-            for (float i = _PlayerCurrentY; i >= -2.175f; i -= 0.2175f)
+            for (float i = _PlayerCurrentY; i >= -2.175f; i -= _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
         }
 
         if (_PlayerCurrentY == 2.175f)
         {
-            for (float i = _PlayerCurrentY; i > 0; i -= 0.2175f)
+            for (float i = _PlayerCurrentY; i > 0; i -= _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
             gameObject.transform.position = new Vector3(_PlayerCurrentX, 0);
         }
@@ -116,11 +118,11 @@ public class Player_Movement : MonoBehaviour {
 
         if (_PlayerCurrentY == 4.35f)
         {
-            for (float i = _PlayerCurrentY; i >= 2.175f; i -= 0.2175f)
+            for (float i = _PlayerCurrentY; i >= 2.175f; i -= _MoveSpeed)
             {
                 _PlayerCurrentY = i;
                 gameObject.transform.position = new Vector3(_PlayerCurrentX, _PlayerCurrentY);
-                yield return new WaitForSeconds(_MoveSpeed);
+                yield return new WaitForSeconds(_MoveDelay);
             }
         }
     }

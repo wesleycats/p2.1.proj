@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour {
     private int _Random;
-    public float _WallSpawnTime;
+    private float _WallSpawnTime;
     private float _Timer;
     private float _WallSpawnPosition;
-    [SerializeField]
-    private GameObject _Wall;
+    public GameObject _Wall;
     private float _HoleNumber;
     private float _HoleLocation;
-    [SerializeField]
-    private GameObject _Hole;
+    public GameObject _Hole;
     
 
 	// Use this for initialization
@@ -31,6 +29,7 @@ public class Spawner : MonoBehaviour {
             Debug.Log("SPAWN");
         }
         */
+        _WallSpawnTime = gameObject.GetComponent<Difficulty>()._WallSpawnTime;
         _WallSpawnPosition = 11; //Random.Range(11, 30);
         _Random = Random.Range(1, 6);
     }
@@ -39,9 +38,9 @@ public class Spawner : MonoBehaviour {
     {
         while (true)
         {
+            yield return new WaitForSeconds(_WallSpawnTime);
             CreateWalls();
             CreateHoles();
-            yield return new WaitForSeconds(_WallSpawnTime);
         }
     }
 

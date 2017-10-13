@@ -15,30 +15,36 @@ public class Player_ShapeChange : MonoBehaviour {
 	[SerializeField]
 	Sprite _Square;
 
-	public int _ShapeValue = 1;
+    public SpriteRenderer _renderer;
 
+    private void Awake()
+    {
+        _renderer = GetComponent<SpriteRenderer>();
+    }
 
-
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("1"))
+		if (Input.GetKeyDown(KeyCode.Q))
 		{
-			_ShapeValue = 1;
-			gameObject.GetComponent<SpriteRenderer>().sprite = _Square;
-
+            _renderer.sprite = _Square;
+			//gameObject.GetComponent<SpriteRenderer>().sprite = _Square;
 		}
 
-		if (Input.GetKeyDown("2"))
+		if (Input.GetKeyDown(KeyCode.W))
 		{
-			_ShapeValue = 2;
-			gameObject.GetComponent<SpriteRenderer>().sprite = _Circle;
+            _renderer.sprite = _Circle;
+            //	gameObject.GetComponent<SpriteRenderer>().sprite = _Circle;
+        }
 
-
-		}
-	}
+        if (Input.GetKeyDown(KeyCode.E))
+        { 
+            _renderer.sprite = _Triangle;
+            //   gameObject.GetComponent<SpriteRenderer>().sprite = _Triangle;
+        }
+    }
 }
